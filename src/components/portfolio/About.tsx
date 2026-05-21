@@ -64,10 +64,8 @@ export const About = () => {
 
             <div className="flex items-center gap-3">
               {[
-                { icon: Instagram, href: "#", label: "Instagram" },
-                { icon: Twitter, href: "#", label: "Twitter" },
-                { icon: Youtube, href: "#", label: "YouTube" },
-                { icon: Globe, href: "#", label: "Website" },
+                { icon: Instagram, href: "https://www.instagram.com/goflow_aman.7?igsh=MWJvbmxibTdzNzE1bQ==", label: "Instagram" },
+               
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}

@@ -11,8 +11,8 @@ export const Footer = () => {
           <span className="heading text-base font-bold">LUMEN<span className="text-gradient">.</span></span>
         </a>
         <div className="flex items-center gap-2">
-          {[Instagram, Twitter, Youtube, Globe].map((Icon, i) => (
-            <a key={i} href="#" className="grid h-9 w-9 place-items-center rounded-full glass hover:bg-secondary transition-colors">
+          {[Instagram].map((Icon, i) => (
+            <a key={i} href="https://www.instagram.com/goflow_aman.7?igsh=MWJvbmxibTdzNzE1bQ==" className="grid h-9 w-9 place-items-center rounded-full glass hover:bg-secondary transition-colors">
               <Icon className="h-4 w-4" />
             </a>
           ))}
