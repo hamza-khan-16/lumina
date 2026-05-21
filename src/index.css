@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium dark photography palette */
+    --background: 240 14% 5%;
+    --foreground: 0 0% 96%;
+
+    --card: 240 12% 8%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 240 14% 6%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 265 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 230 95% 68%;
+
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 240 8% 14%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 230 95% 68%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 8% 16%;
+    --input: 240 8% 14%;
+    --ring: 265 90% 66%;
+
+    --radius: 0.875rem;
+
+    /* Brand gradients & shadows */
+    --gradient-primary: linear-gradient(135deg, hsl(265 90% 66%), hsl(230 95% 68%));
+    --gradient-hero: linear-gradient(180deg, hsl(240 14% 5% / 0.2) 0%, hsl(240 14% 5% / 0.6) 60%, hsl(240 14% 5%) 100%);
+    --gradient-glow: radial-gradient(60% 60% at 50% 50%, hsl(265 90% 66% / 0.35), transparent 70%);
+    --shadow-elegant: 0 30px 80px -20px hsl(265 90% 50% / 0.35);
+    --shadow-soft: 0 10px 40px -10px hsl(240 50% 2% / 0.6);
+    --glass-bg: hsl(240 14% 8% / 0.55);
+    --glass-border: hsl(0 0% 100% / 0.08);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection { background: hsl(var(--primary) / 0.35); color: hsl(var(--foreground)); }
+}
+
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid var(--glass-border);
+  }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .heading { font-family: 'Montserrat', system-ui, sans-serif; letter-spacing: -0.02em; }
+  .container-x { @apply mx-auto w-full max-w-7xl px-6 md:px-10; }
+}
